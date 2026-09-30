@@ -1,4 +1,4 @@
-import type { PixelGrid } from '@/components/PixelArt';
+import type { PixelGrid } from '@/components/pixelArt';
 
 const _ = null;
 // Color palette shorthand

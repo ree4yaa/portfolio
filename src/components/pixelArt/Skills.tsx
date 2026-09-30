@@ -1,10 +1,10 @@
-import { PixelArt } from '@/components/PixelArt';
+import { PixelArt } from '@/components/pixelArt';
 import { PixelButton } from '@/components/pixelArt/PixelButton';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { FileText, Download, Sparkles } from 'lucide-react';
 import { star } from '@/components/pixelArt/sprites';
 
-export function Resume() {
+export function Skills() {
   const { ref, visible } = useReveal();
 
   return (

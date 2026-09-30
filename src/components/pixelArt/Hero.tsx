@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PixelArt } from '@/components/PixelArt';
+import { PixelArt } from '@/components/pixelArt';
 import { PixelButton } from '@/components/pixelArt/PixelButton';
 import { EnvironmentScene } from '@/components/pixelArt/Decorations';
 import { girlDev, girlDevIdle, battery } from '@/components/pixelArt/sprites';

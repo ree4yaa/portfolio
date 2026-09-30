@@ -1,4 +1,4 @@
-import { PixelArt } from '@/components/PixelArt';
+import { PixelArt } from '@/components/pixelArt';
 import { PixelPanel } from '@/components/pixelArt/PixelPanel';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { avatar, controller, heart, sword, shield, star } from '@/components/pixelArt/sprites';

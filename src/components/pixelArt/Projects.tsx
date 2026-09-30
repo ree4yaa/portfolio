@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { PixelArt } from '@/components/PixelArt';
+import { PixelArt } from '@/components/pixelArt';
 import { PixelButton } from '@/components/pixelArt/PixelButton';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { Github, ExternalLink, Eye, Swords, Heart } from 'lucide-react';
-import type { PixelGrid } from '@/components/PixelArt';
+import type { PixelGrid } from '@/components/pixelArt';
 
 interface Project {
   title: string;
