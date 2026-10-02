@@ -43,7 +43,3 @@ Each project represents something I wanted to learn, experiment with, or build f
 ## Connect With Me
 
 If you'd like to connect, collaborate, or just talk about tech, feel free to reach out through the links on my portfolio.
-
----
-
-⭐ If you like the portfolio, consider giving this repository a star!
