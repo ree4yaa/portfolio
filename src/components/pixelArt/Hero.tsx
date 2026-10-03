@@ -63,9 +63,6 @@ export function Hero({ onStart }: HeroProps) {
             </div>
 
             <div className="flex items-center gap-1 border-l-2 border-retro-gray/50 pl-2 sm:pl-4">
-              <span className="font-pixel text-[7px] sm:text-[9px] text-retro-yellow">
-                LEVEL 03
-              </span>
             </div>
           </div>
 

@@ -25,10 +25,10 @@ const K = '#06060c', W = '#f0f0f8', Sk = '#ffccaa', Hr = '#3a1a00', Bl = '#2244a
 
 /* === BOSS SPRITES (pixel art thumbnails) === */
 const floraBoss: PixelGrid = [
-  [_, _, _, _, G, G, _, _, _, _],
-  [_, _, _, G, G, Gd, G, _, _, _],
-  [_, _, G, Gd, G, G, Gd, G, _, _],
-  [_, G, G, Gd, R, Gd, G, Gd, G, _],
+  [C, _, _, _, _, _, _, _, _, _],
+  [_, C, _, _, G, Gd, G, _, _, _],
+  [_, _, C, Gd, G, G, Gd, G, _, _],
+  [_, G, G, C, R, Gd, G, Gd, G, _],
   [_, G, Gd, R, Y, R, Gd, G, G, _],
   [_, _, G, Gd, G, G, Gd, G, _, _],
   [_, _, _, G, Gd, G, G, _, _, _],
@@ -65,14 +65,14 @@ const synapzBoss: PixelGrid = [
 
 const projects: Project[] = [
   {
-    title: 'FLORA FRIEND',
-    tagline: 'STAGE 01 — NATURE BOSS',
-    description: 'A smart plant monitoring system using IoT sensors and mobile/web technology. Tracks soil moisture, temperature, and sunlight to keep plants healthy.',
-    tech: ['IoT', 'Arduino', 'React', 'Mobile'],
-    github: 'https://github.com/reeya',
+    title: 'TIC TAC TOE',
+    tagline: 'STAGE 1 - FUN GAME',
+    description: 'A fun and interactive Tic-Tac-Toe game, featuring a clean UI, smooth gameplay, and dynamic win/draw detection.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    github: 'https://github.com/ree4yaa/Tic-Tac-Toe',
     demo: 'https://florafriend.demo',
     color: 'green',
-    difficulty: '★★☆',
+    difficulty: '★☆☆',
     bossArt: floraBoss,
   },
   {

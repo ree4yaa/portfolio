@@ -31,12 +31,12 @@ export function Footer() {
 
         {/* GAME COMPLETE? */}
         <h2 className="font-pixel text-[16px] sm:text-[24px] text-retro-pink text-pixel-shadow mb-3">
-          GAME COMPLETE?
+          MADE WITH LOVE
         </h2>
 
         {/* CONTINUE BUILDING... */}
         <p className="font-pixel text-[10px] sm:text-[14px] text-retro-cyan text-pixel-shadow-cyan mb-2 animate-pulse">
-          CONTINUE BUILDING...
+          BY REEYA
         </p>
 
         {/* Heart decoration */}
@@ -48,7 +48,7 @@ export function Footer() {
 
         {/* Footer text */}
         <p className="font-mono text-base text-retro-gray mt-6">
-          © 2026 REEYA · CSE / Software Developer
+          © 2026 All Rights Reserved.
         </p>
         <p className="font-mono text-sm text-retro-gray/60 mt-1">
           Built with React + Vite + Tailwind CSS

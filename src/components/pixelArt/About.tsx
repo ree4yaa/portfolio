@@ -40,11 +40,6 @@ export function About() {
 
       {/* Section header */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
-        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #00f0ff, 0 0 20px rgba(0,240,255,0.2)' }}>
-          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-cyan text-pixel-shadow-cyan">
-            LEVEL 01
-          </span>
-        </div>
         <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
           ABOUT ME
         </h2>
@@ -63,7 +58,7 @@ export function About() {
           <PixelPanel color="pink" title="PLAYER PROFILE" icon={<User size={14} className="text-retro-pink" />}>
             <div className="space-y-0">
               <InfoLine label="NAME:" value="Reeya" color="text-retro-pink" />
-              <InfoLine label="ROLE:" value="CSE / Software Developer" color="text-retro-cyan" />
+              <InfoLine label="ROLE:" value="CSE-Student" color="text-retro-cyan" />
               <InfoLine label="LOCATION:" value="India" color="text-retro-green" />
               <InfoLine label="STATUS:" value="Learning + Building" color="text-retro-yellow" />
             </div>
@@ -72,25 +67,20 @@ export function About() {
           {/* Card 2: CURRENT MISSION */}
           <PixelPanel color="yellow" title="CURRENT MISSION" icon={<Target size={14} className="text-retro-yellow" />}>
             <div className="space-y-2">
-              <MissionRow text="Building projects" icon="▣" />
-              <MissionRow text="Learning React" icon="▣" />
-              <MissionRow text="Improving DSA" icon="▣" />
-              <MissionRow text="Exploring AI/ML" icon="▣" />
+              <MissionRow text="Networking" icon="▣" />
+              <MissionRow text="Cybersecurity" icon="▣" />
+              <MissionRow text="AI Tools/Automations" icon="▣" />
+              <MissionRow text="FOSS" icon="▣" />
             </div>
           </PixelPanel>
 
-          {/* Card 3: TRAINING LOG */}
-          <PixelPanel color="cyan" title="TRAINING LOG" icon={<BookOpen size={14} className="text-retro-cyan" />}>
+          {/* Card 3: EDUCATION LOG */}
+          <PixelPanel color="cyan" title="EDUCATION LOG" icon={<BookOpen size={14} className="text-retro-cyan" />}>
             <div className="space-y-1">
               <InfoLine label="DEGREE:" value="B.Tech CSE-DS" color="text-retro-cyan" />
               <InfoLine label="UNIVERSITY:" value="GGSIPU" color="text-retro-white" />
               <InfoLine label="DURATION:" value="2025–Present" color="text-retro-green" />
               <div className="mt-2 flex items-center gap-2">
-                <span className="font-pixel text-[7px] text-retro-gray">EXP:</span>
-                <div className="flex-1 h-3 border-2 border-retro-dark bg-retro-dark">
-                  <div className="h-full bg-gradient-to-r from-retro-cyan to-retro-green" style={{ width: '25%' }} />
-                </div>
-                <span className="font-pixel text-[7px] text-retro-cyan">LV.1</span>
               </div>
             </div>
           </PixelPanel>
@@ -101,15 +91,11 @@ export function About() {
               <SkillTag label="HTML" />
               <SkillTag label="CSS" />
               <SkillTag label="JavaScript" />
+              <SkillTag label="TypeScript" />
               <SkillTag label="React" />
               <SkillTag label="Python" />
               <SkillTag label="Git/GitHub" />
-              <SkillTag label="SQL" />
-              <SkillTag label="DSA" />
-            </div>
-            <div className="mt-3 flex items-center gap-2">
-              <PixelArt grid={star} size={3} />
-              <span className="font-pixel text-[7px] text-retro-yellow">SKILLS UNLOCKED: 8/∞</span>
+              
             </div>
           </PixelPanel>
         </div>
@@ -143,7 +129,6 @@ function GameConsole() {
 
         {/* Brand text */}
         <div className="flex items-center justify-between mb-3 px-1">
-          <span className="font-pixel text-[7px] text-retro-yellow">REEYA-BOY</span>
           <div className="flex gap-1">
             <div className="w-2 h-2 bg-retro-red animate-blink" />
             <div className="w-2 h-2 bg-retro-green" />
@@ -167,7 +152,6 @@ function GameConsole() {
                 <PixelArt grid={avatar} size={12} className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]" />
               </div>
               <div className="font-pixel text-[8px] text-retro-green animate-blink">REEYA</div>
-              <div className="font-pixel text-[6px] text-retro-cyan">LV.03 DEVELOPER</div>
             </div>
             {/* Screen corner decorations */}
             <div className="absolute top-1 left-1 font-pixel text-[5px] text-retro-green">●</div>
