@@ -52,11 +52,6 @@ export function Skills() {
           {/* Rarity */}
           <div className="font-pixel text-[7px] text-retro-yellow mb-2">★★★ RARE ITEM ★★★</div>
 
-          {/* Item name */}
-          <h3 className="font-pixel text-[12px] sm:text-[16px] text-retro-green text-pixel-shadow-green mb-3">
-            REEYA_RESUME.PDF
-          </h3>
-
           {/* Stats */}
           <div className="grid grid-cols-3 gap-2 mb-6 font-mono text-xs text-retro-white/60">
             <div className="border border-retro-gray/30 py-1">
@@ -82,7 +77,6 @@ export function Skills() {
             glow
             className="w-full"
           >
-            <Download size={14} /> DOWNLOAD RESUME
           </PixelButton>
 
           <div className="mt-4 flex items-center justify-center gap-1">

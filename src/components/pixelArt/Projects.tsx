@@ -205,15 +205,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         {/* Difficulty */}
         <div className="flex items-center justify-between mb-4 pb-2 border-b border-retro-gray/20">
-          <span className="font-pixel text-[7px] text-retro-gray">DIFFICULTY:</span>
+          <span className="font-pixel text-[8px] text-retro-white/80">Difficulty</span>
           <span className="font-pixel text-[8px]" style={{ color: c }}>{project.difficulty}</span>
         </div>
 
         {/* Buttons */}
         <div className="flex flex-col gap-2">
-          <PixelButton color={project.color} size="sm" className="w-full" glow>
-            <Eye size={12} /> VIEW MISSION
-          </PixelButton>
           <div className="grid grid-cols-2 gap-2">
             <PixelButton href={project.github} target="_blank" color="pink" size="sm" className="w-full">
               <Github size={12} /> GITHUB
