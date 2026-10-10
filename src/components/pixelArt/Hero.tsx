@@ -80,12 +80,12 @@ export function Hero({ onStart }: HeroProps) {
 
       {/* === MAIN TITLE === */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 pt-8 sm:pt-12">
-        {/* 2026 */}
+
         <h1
           className="font-pixel text-retro-cyan text-pixel-shadow-cyan text-[24px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-none mb-2 sm:mb-4 animate-fade-up"
           style={{ animationDelay: '0.2s' }}
         >
-          2026
+          
         </h1>
 
         {/* PORTFOLIO */}
@@ -93,7 +93,7 @@ export function Hero({ onStart }: HeroProps) {
           className="font-pixel text-retro-pink text-pixel-shadow text-[20px] sm:text-[32px] md:text-[44px] lg:text-[56px] leading-none mb-6 sm:mb-8 animate-fade-up"
           style={{ animationDelay: '0.4s' }}
         >
-          PORTFOLIO
+          
         </h1>
 
         {/* Subtitle: PLAYER: REEYA */}
