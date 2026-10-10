@@ -19,6 +19,16 @@ interface SkillCategory {
 
 const categories: SkillCategory[] = [
   {
+    name: 'Cybersecurity',
+    color: 'green',
+    icon: Brain,
+    skills: [
+     { name: 'Linux CLI', level: 70, desc: 'Command line proficiency & shell scripting', unlocked: true },
+      { name: 'Networking fundamentals', level: 90, desc: 'Core networking concepts & protocols', unlocked: true },
+      { name: 'HTTP, DNS & web fundamentals', level: 85, desc: 'Understanding web protocols & services', unlocked: true },
+    ],
+  },
+  {
     name: 'Frontend',
     color: 'cyan',
     icon: Code2,
