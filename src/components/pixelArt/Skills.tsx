@@ -58,7 +58,8 @@ const categories: SkillCategory[] = [
     skills: [
       { name: 'Git / GitHub', level: 80, desc: 'Version control & collaboration', unlocked: true },
       { name: 'VS Code', level: 90, desc: 'Primary development environment', unlocked: true },
-      { name: 'Docker', level: 35, desc: 'Containerization basics', unlocked: false },
+      { name: 'Nmap', level: 65, desc: 'Network scanning & enumeration', unlocked: true},
+      { name: 'Wireshark', level: 35, desc: 'Network analysis & troubleshooting', unlocked: true },
     ],
   },
 ];
