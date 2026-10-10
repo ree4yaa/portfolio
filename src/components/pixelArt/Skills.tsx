@@ -1,88 +1,239 @@
-import { PixelArt } from '@/components/pixelArt';
-import { PixelButton } from '@/components/pixelArt/PixelButton';
+import { useState } from 'react';
+import { PixelPanel } from '@/components/pixelArt/PixelPanel';
 import { useReveal } from '@/components/pixelArt/useReveal';
-import { FileText, Download, Sparkles } from 'lucide-react';
-import { star } from '@/components/pixelArt/sprites';
+import { Sword, Code2, Brain, Wrench, Lock, Star } from 'lucide-react';
+
+interface Skill {
+  name: string;
+  level: number;
+  desc: string;
+  unlocked: boolean;
+}
+
+interface SkillCategory {
+  name: string;
+  color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
+  icon: typeof Sword;
+  skills: Skill[];
+}
+
+const categories: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    color: 'cyan',
+    icon: Code2,
+    skills: [
+      { name: 'HTML', level: 90, desc: 'Semantic markup & accessibility', unlocked: true },
+      { name: 'CSS', level: 85, desc: 'Responsive layouts & animations', unlocked: true },
+      { name: 'JavaScript', level: 80, desc: 'ES6+, DOM, async patterns', unlocked: true },
+      { name: 'React', level: 75, desc: 'Hooks, components, state mgmt', unlocked: true },
+      { name: 'Tailwind', level: 82, desc: 'Utility-first CSS framework', unlocked: true },
+    ],
+  },
+  {
+    name: 'Programming',
+    color: 'pink',
+    icon: Sword,
+    skills: [
+      { name: 'Python', level: 78, desc: 'Scripting, automation, OOP', unlocked: true },
+      { name: 'DSA', level: 65, desc: 'Data structures & algorithms', unlocked: true },
+      { name: 'SQL', level: 72, desc: 'Queries, joins, schema design', unlocked: true },
+      { name: 'C / C++', level: 60, desc: 'Systems programming basics', unlocked: false },
+    ],
+  },
+  {
+    name: 'Data / AI',
+    color: 'green',
+    icon: Brain,
+    skills: [
+      { name: 'Pandas', level: 70, desc: 'Data analysis & manipulation', unlocked: true },
+      { name: 'NumPy', level: 68, desc: 'Numerical computing', unlocked: true },
+      { name: 'ML Basics', level: 55, desc: 'Supervised learning concepts', unlocked: true },
+      { name: 'Deep Learning', level: 30, desc: 'Neural networks & training', unlocked: false },
+    ],
+  },
+  {
+    name: 'Tools',
+    color: 'yellow',
+    icon: Wrench,
+    skills: [
+      { name: 'Git / GitHub', level: 80, desc: 'Version control & collaboration', unlocked: true },
+      { name: 'VS Code', level: 90, desc: 'Primary development environment', unlocked: true },
+      { name: 'Figma', level: 55, desc: 'UI/UX design & prototyping', unlocked: true },
+      { name: 'Docker', level: 35, desc: 'Containerization basics', unlocked: false },
+    ],
+  },
+];
+
+const colorHex: Record<string, string> = {
+  pink: '#ff2e88',
+  cyan: '#00f0ff',
+  green: '#39ff14',
+  yellow: '#ffe600',
+  purple: '#9d4edd',
+};
 
 export function Skills() {
   const { ref, visible } = useReveal();
+  const [hovered, setHovered] = useState<string | null>(null);
+  const [activeCat, setActiveCat] = useState(0);
 
   return (
-    <section className="relative w-full py-20 px-4 overflow-hidden bg-retro-bg pixel-noise">
+    <section
+      id="skills"
+      className="relative min-h-screen w-full py-20 px-4 overflow-hidden bg-retro-bg2 pixel-noise"
+    >
       <div className="absolute inset-0 pixel-grid opacity-20" />
 
-      <div ref={ref} className={`relative z-10 max-w-4xl mx-auto ${visible ? 'animate-fade-up' : 'opacity-0'}`}>
-        <div className="text-center mb-8">
-          <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-4 py-2 mb-4" style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 16px rgba(57,255,20,0.2)' }}>
-            <span className="font-pixel text-[8px] sm:text-[10px] text-retro-green animate-pulse">
-              ★ ITEM ACQUIRED ★
-            </span>
+      {/* Header */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
+        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 20px rgba(57,255,20,0.2)' }}>
+          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-green text-pixel-shadow-green">
+            SKILL TREE
+          </span>
+        </div>
+        <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
+          SKILLS
+        </h2>
+        <p className="font-mono text-lg text-retro-gray">~ Unlockable Abilities ~</p>
+      </div>
+
+      <div ref={ref} className={`relative z-10 max-w-5xl mx-auto ${visible ? 'animate-fade-up' : 'opacity-0'}`}>
+        {/* Category tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((cat, i) => {
+            const Icon = cat.icon;
+            const isActive = activeCat === i;
+            return (
+              <button
+                key={cat.name}
+                onClick={() => setActiveCat(i)}
+                className={`flex items-center gap-2 font-pixel text-[8px] sm:text-[10px] px-3 sm:px-4 py-2 sm:py-3 border-4 border-retro-dark transition-all duration-100 ${
+                  isActive ? 'bg-retro-panel2' : 'bg-retro-bg2'
+                }`}
+                style={{
+                  boxShadow: isActive
+                    ? `0 0 0 4px ${colorHex[cat.color]}, 0 0 16px ${colorHex[cat.color]}66`
+                    : '0 0 0 2px #33334a',
+                  color: isActive ? colorHex[cat.color] : '#5a5a7a',
+                }}
+              >
+                <Icon size={14} strokeWidth={2.5} />
+                <span className="hidden sm:inline">{cat.name}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Skill tree grid */}
+        <div className="relative">
+          {/* Connection lines decoration */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-retro-gray/20 -translate-x-1/2 hidden md:block" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {categories[activeCat].skills.map((skill, i) => {
+              const cat = categories[activeCat];
+              const isHovered = hovered === skill.name;
+              return (
+                <div
+                  key={skill.name}
+                  className="relative"
+                  onMouseEnter={() => setHovered(skill.name)}
+                  onMouseLeave={() => setHovered(null)}
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  {/* Connection node */}
+                  <div
+                    className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-3 border-2 border-retro-dark z-10"
+                    style={{ backgroundColor: skill.unlocked ? colorHex[cat.color] : '#33334a' }}
+                  />
+
+                  <div
+                    className={`relative p-4 bg-retro-panel border-4 border-retro-dark transition-all duration-150 cursor-pointer ${
+                      skill.unlocked ? 'card-hover' : ''
+                    } ${isHovered && skill.unlocked ? 'animate-shake' : ''}`}
+                    style={{
+                      boxShadow: isHovered && skill.unlocked
+                        ? `0 0 0 4px ${colorHex[cat.color]}, 0 0 20px ${colorHex[cat.color]}88`
+                        : `0 0 0 2px ${skill.unlocked ? colorHex[cat.color] + '44' : '#33334a'}`,
+                    }}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        {skill.unlocked ? (
+                          <Star size={14} fill={colorHex[cat.color]} className="text-current" style={{ color: colorHex[cat.color] }} />
+                        ) : (
+                          <Lock size={14} className="text-retro-gray" />
+                        )}
+                        <span
+                          className="font-pixel text-[9px] sm:text-[11px]"
+                          style={{ color: skill.unlocked ? colorHex[cat.color] : '#5a5a7a' }}
+                        >
+                          {skill.name}
+                        </span>
+                      </div>
+                      <span className="font-pixel text-[7px] text-retro-gray">
+                        LV.{Math.floor(skill.level / 10)}
+                      </span>
+                    </div>
+
+                    {/* Skill level bar */}
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 h-3 border-2 border-retro-dark bg-retro-dark relative overflow-hidden">
+                        <div
+                          className="h-full transition-all duration-500"
+                          style={{
+                            width: skill.unlocked ? `${skill.level}%` : '0%',
+                            backgroundColor: colorHex[cat.color],
+                            boxShadow: skill.unlocked ? `0 0 8px ${colorHex[cat.color]}` : 'none',
+                          }}
+                        />
+                      </div>
+                      <span className="font-pixel text-[7px]" style={{ color: colorHex[cat.color] }}>
+                        {skill.unlocked ? `${skill.level}%` : '???'}
+                      </span>
+                    </div>
+
+                    {/* Tooltip on hover */}
+                    {isHovered && (
+                      <div
+                        className="absolute -top-16 left-1/2 -translate-x-1/2 z-20 bg-retro-dark border-2 border-retro-dark px-3 py-2 whitespace-nowrap animate-pop-in tooltip-arrow"
+                        style={{ boxShadow: `0 0 0 2px ${colorHex[cat.color]}` }}
+                      >
+                        <p className="font-mono text-sm text-retro-white">{skill.desc}</p>
+                        <p className="font-pixel text-[6px] mt-1" style={{ color: colorHex[cat.color] }}>
+                          PROFICIENCY: {skill.level}%
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Lock overlay */}
+                    {!skill.unlocked && (
+                      <div className="absolute inset-0 bg-retro-dark/50 flex items-center justify-center">
+                        <span className="font-pixel text-[7px] text-retro-gray animate-blink">
+                          LOCKED
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Item card */}
-        <div
-          className="relative mx-auto max-w-md bg-retro-panel border-4 border-retro-dark p-6 sm:p-8 text-center card-hover"
-          style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 30px rgba(57,255,20,0.25)' }}
-        >
-          {/* Floating sparkles */}
-          <div className="absolute -top-3 -left-3 animate-float">
-            <PixelArt grid={star} size={4} />
-          </div>
-          <div className="absolute -top-3 -right-3 animate-float-slow">
-            <PixelArt grid={star} size={4} />
-          </div>
-          <div className="absolute -bottom-3 -left-3 animate-float-slow" style={{ animationDelay: '0.5s' }}>
-            <PixelArt grid={star} size={3} />
-          </div>
-          <div className="absolute -bottom-3 -right-3 animate-float" style={{ animationDelay: '0.8s' }}>
-            <PixelArt grid={star} size={3} />
-          </div>
-
-          {/* Item icon */}
-          <div className="flex justify-center mb-4">
-            <div
-              className="p-4 border-4 border-retro-dark bg-retro-green/10"
-              style={{ boxShadow: '0 0 16px rgba(57,255,20,0.3)' }}
-            >
-              <FileText size={48} className="text-retro-green" strokeWidth={2} />
-            </div>
-          </div>
-
-          {/* Rarity */}
-          <div className="font-pixel text-[7px] text-retro-yellow mb-2">★★★ RARE ITEM ★★★</div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-2 mb-6 font-mono text-xs text-retro-white/60">
-            <div className="border border-retro-gray/30 py-1">
-              <div className="font-pixel text-[6px] text-retro-cyan">PAGES</div>
-              <div className="text-base text-retro-white">02</div>
-            </div>
-            <div className="border border-retro-gray/30 py-1">
-              <div className="font-pixel text-[6px] text-retro-pink">FORMAT</div>
-              <div className="text-base text-retro-white">PDF</div>
-            </div>
-            <div className="border border-retro-gray/30 py-1">
-              <div className="font-pixel text-[6px] text-retro-yellow">SIZE</div>
-              <div className="text-base text-retro-white">2.1MB</div>
-            </div>
-          </div>
-
-          {/* Download button */}
-          <PixelButton
-            href="#"
-            download
-            color="green"
-            size="md"
-            glow
-            className="w-full"
-          >
-          </PixelButton>
-
-          <div className="mt-4 flex items-center justify-center gap-1">
-            <Sparkles size={10} className="text-retro-yellow" />
-            <span className="font-mono text-sm text-retro-gray">Equip to view full stats</span>
-          </div>
+        {/* Skill tree footer */}
+        <div className="mt-8 text-center">
+          <p className="font-mono text-base text-retro-gray">
+            Total skills unlocked:{' '}
+            <span className="text-retro-green font-pixel text-[10px]">
+              {categories.flatMap((c) => c.skills).filter((s) => s.unlocked).length}
+            </span>
+            {' / '}
+            <span className="text-retro-white font-pixel text-[10px]">
+              {categories.flatMap((c) => c.skills).length}
+            </span>
+          </p>
         </div>
       </div>
     </section>
