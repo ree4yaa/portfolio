@@ -133,16 +133,8 @@ Currently, I'm learning security fundamentals, experimenting with automation wor
         </div>
       </div>
 
-      {/* === GIRL DEVELOPER CHARACTER === */}
-      <div className="absolute bottom-[16%] left-1/2 -translate-x-1/2 z-10">
-        <div className="animate-idle-bob">
-          <PixelArt
-            grid={frame % 2 === 0 ? girlDev : girlDevIdle}
-            size={8}
-            className="drop-shadow-[0_0_12px_rgba(255,46,136,0.4)]"
-          />
-        </div>
         {/* Shadow */}
+        <div>
         <div className="mx-auto mt-1 h-2 w-24 rounded-none bg-retro-dark/60 blur-[2px]" />
       </div>
 
