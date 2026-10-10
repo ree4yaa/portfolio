@@ -103,7 +103,15 @@ export function Hero({ onStart }: HeroProps) {
         >
           <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-4 py-2 sm:px-6 sm:py-3" style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 16px rgba(57,255,20,0.2)' }}>
             <span className="font-pixel text-[8px] sm:text-[11px] md:text-[13px] text-retro-green">
-              PLAYER: REEYA
+              # A Little About Me 👾
+
+Hey! I'm Reeya, a CSE student exploring cybersecurity, Linux, and AI automation.
+
+Currently, I'm learning security fundamentals, experimenting with automation workflows, and exploring open-source tech on **Fedora Workstation**.
+
+When I'm not learning, I'm probably testing a new tool or wondering why the terminal has beef with me.
+
+**Still exploring, occasionally breaking things, and figuring it all out one step at a time.**
             </span>
           </div>
         </div>
