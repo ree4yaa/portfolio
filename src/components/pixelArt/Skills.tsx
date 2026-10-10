@@ -36,22 +36,11 @@ const categories: SkillCategory[] = [
     icon: Sword,
     skills: [
       { name: 'Python', level: 78, desc: 'Scripting, automation, OOP', unlocked: true },
-      { name: 'DSA', level: 65, desc: 'Data structures & algorithms', unlocked: true },
       { name: 'SQL', level: 72, desc: 'Queries, joins, schema design', unlocked: true },
       { name: 'C / C++', level: 60, desc: 'Systems programming basics', unlocked: false },
     ],
   },
-  {
-    name: 'Data / AI',
-    color: 'green',
-    icon: Brain,
-    skills: [
-      { name: 'Pandas', level: 70, desc: 'Data analysis & manipulation', unlocked: true },
-      { name: 'NumPy', level: 68, desc: 'Numerical computing', unlocked: true },
-      { name: 'ML Basics', level: 55, desc: 'Supervised learning concepts', unlocked: true },
-      { name: 'Deep Learning', level: 30, desc: 'Neural networks & training', unlocked: false },
-    ],
-  },
+  
   {
     name: 'Tools',
     color: 'yellow',
@@ -59,7 +48,6 @@ const categories: SkillCategory[] = [
     skills: [
       { name: 'Git / GitHub', level: 80, desc: 'Version control & collaboration', unlocked: true },
       { name: 'VS Code', level: 90, desc: 'Primary development environment', unlocked: true },
-      { name: 'Figma', level: 55, desc: 'UI/UX design & prototyping', unlocked: true },
       { name: 'Docker', level: 35, desc: 'Containerization basics', unlocked: false },
     ],
   },
