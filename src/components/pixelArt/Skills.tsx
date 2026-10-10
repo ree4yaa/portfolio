@@ -29,7 +29,19 @@ const categories: SkillCategory[] = [
     ],
   },
   {
-    name: 'Frontend',
+    name: 'AI Automation',
+    color: 'purple',
+    icon: Brain,
+    skills: [
+      {name: 'Make', level: 75, desc: 'Workflow automation & integrations', unlocked: true },
+      {name: 'Airtable', level: 65, desc: 'Database management & automation', unlocked: true },
+      {name: 'tally', level: 60, desc: 'Form building & data collection', unlocked: true },
+      {name: 'Webhooks & APIs', level: 70, desc: 'Event-driven automation & notifications', unlocked: true },
+      {name: 'JSON & workflow automation', level: 80, desc: 'Data formatting & integration', unlocked: true }
+    ]
+    },
+  {
+    name: 'Web Development',
     color: 'cyan',
     icon: Code2,
     skills: [
