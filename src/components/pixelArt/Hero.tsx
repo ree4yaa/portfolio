@@ -97,6 +97,15 @@ export function Hero({ onStart }: HeroProps) {
         </h1>
 
         {/* Subtitle: PLAYER: REEYA */}
+
+        <div className="absolute bottom-[16%] left-1/2 -translate-x-1/2 z-10">
+        <div className="animate-idle-bob">
+          <PixelArt
+            grid={frame % 2 === 0 ? girlDev : girlDevIdle}
+            size={8}
+            className="drop-shadow-[0_0_12px_rgba(255,46,136,0.4)]"
+          />
+        </div>
         <div
           className="animate-fade-up mb-8 sm:mb-12"
           style={{ animationDelay: '0.6s' }}
