@@ -72,6 +72,7 @@ const categories: SkillCategory[] = [
       { name: 'VS Code', level: 90, desc: 'Primary development environment', unlocked: true },
       { name: 'Nmap', level: 65, desc: 'Network scanning & enumeration', unlocked: true},
       { name: 'Wireshark', level: 35, desc: 'Network analysis & troubleshooting', unlocked: true },
+      {name: 'Hydra', level: 50, desc: 'Password cracking & brute-force attacks', unlocked: true}
     ],
   },
 ];
