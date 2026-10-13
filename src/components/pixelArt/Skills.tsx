@@ -234,17 +234,7 @@ export function Skills() {
         </div>
 
         {/* Skill tree footer */}
-        <div className="mt-8 text-center">
-          <p className="font-mono text-base text-retro-gray">
-            Total skills unlocked:{' '}
-            <span className="text-retro-green font-pixel text-[10px]">
-              {categories.flatMap((c) => c.skills).filter((s) => s.unlocked).length}
-            </span>
-            {' / '}
-            <span className="text-retro-white font-pixel text-[10px]">
-              {categories.flatMap((c) => c.skills).length}
-            </span>
-          </p>
+        <div className="mt-8 text-center">  
         </div>
       </div>
     </section>
