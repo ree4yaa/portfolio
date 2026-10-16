@@ -149,9 +149,14 @@ function GameConsole() {
             {/* Screen content: avatar */}
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <div className="animate-float">
-                <PixelArt grid={avatar} size={12} className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]" />
+               <PixelArt
+                 grid={avatar}
+                 size={12}
+                 className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]"
+                />
+                </div>
+                </div>
               </div>
-            </div>
             {/* Screen corner decorations */}
             <div className="absolute top-1 left-1 font-pixel text-[5px] text-retro-green">●</div>
             <div className="absolute top-1 right-1 font-pixel text-[5px] text-retro-yellow">★</div>
