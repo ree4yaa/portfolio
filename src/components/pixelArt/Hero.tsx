@@ -118,7 +118,7 @@ export function Hero({ onStart }: HeroProps) {
             style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 16px rgba(57,255,20,0.2)' }}
           >
             <p className="font-pixel text-[8px] sm:text-[10px] md:text-[12px] text-retro-green leading-relaxed">
-              Hey! I'm Reeya, a 2nd year CSE student exploring cybersecurity, Linux, and AI automation. Currently, I'm learning security fundamentals, experimenting with automation workflows, and exploring open-source tech on Fedora Workstation. When I'm not learning, I'm probably testing a new tool or wondering why the terminal has beef with me.
+              Hey! I'm Reeya, a 2nd year CSE student exploring cybersecurity, Linux, and AI automation.
             </p>
           </div>
         </div>
