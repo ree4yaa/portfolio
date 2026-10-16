@@ -151,7 +151,6 @@ function GameConsole() {
               <div className="animate-float">
                 <PixelArt grid={avatar} size={12} className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]" />
               </div>
-              <div className="font-pixel text-[8px] text-retro-green animate-blink">REEYA</div>
             </div>
             {/* Screen corner decorations */}
             <div className="absolute top-1 left-1 font-pixel text-[5px] text-retro-green">●</div>
