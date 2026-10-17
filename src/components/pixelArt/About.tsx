@@ -95,6 +95,7 @@ export function About() {
               <SkillTag label="React" />
               <SkillTag label="Python" />
               <SkillTag label="Git/GitHub" />
+              <SkillTag label="Linux" />
               
             </div>
           </PixelPanel>
