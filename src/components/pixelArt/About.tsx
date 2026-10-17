@@ -133,7 +133,7 @@ function GameConsole() {
             <div className="w-2 h-2 bg-retro-red animate-blink" />
             <div className="w-2 h-2 bg-retro-green" />
           </div>
-        </div>
+        </div>w
 
         {/* Screen bezel */}
         <div className="bg-retro-dark border-4 border-retro-dark p-2 sm:p-3" style={{ boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)' }}>
