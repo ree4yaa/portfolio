@@ -81,8 +81,8 @@ export function Resume() {
             size="md"
             glow
             className="w-full"
-          >
-            <Download size={14} /> DOWNLOAD RESUME
+          > 
+          <Download size={14} /> DOWNLOAD RESUME
           </PixelButton>
 
           <div className="mt-4 flex items-center justify-center gap-1">
