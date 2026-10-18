@@ -191,27 +191,26 @@ function GameConsole() {
           <PixelArt grid={controller} size={3} />
         </div>
       </div>
+  );
 
+  return (
+    <div className="relative">
       {/* Floating pixel art decorations */}
-      return (
-  <div className="relative">
-    {/* Your other component content goes here */}
+      <div className="absolute -top-6 -left-6 animate-float hidden sm:block">
+        <PixelArt grid={heart} size={4} />
+      </div>
 
-    {/* Floating pixel art decorations */}
-    <div className="absolute -top-6 -left-6 animate-float hidden sm:block">
-      <PixelArt grid={heart} size={4} />
-    </div>
+      <div className="absolute -top-4 -right-8 animate-float-slow hidden sm:block">
+        <PixelArt grid={sword} size={4} />
+      </div>
 
-    <div className="absolute -top-4 -right-8 animate-float-slow hidden sm:block">
-      <PixelArt grid={sword} size={4} />
-    </div>
+      <div className="absolute -bottom-4 -left-8 animate-float-slow hidden sm:block" style={{ animationDelay: '0.5s' }}>
+        <PixelArt grid={shield} size={4} />
+      </div>
 
-    <div className="absolute -bottom-4 -left-8 animate-float-slow hidden sm:block" style={{ animationDelay: '0.5s' }}>
-      <PixelArt grid={shield} size={4} />
+      <div className="absolute -bottom-6 -right-6 animate-float hidden sm:block" style={{ animationDelay: '1s' }}>
+        <PixelArt grid={star} size={4} />
+      </div>
     </div>
-
-    <div className="absolute -bottom-6 -right-6 animate-float hidden sm:block" style={{ animationDelay: '1s' }}>
-      <PixelArt grid={star} size={4} />
-    </div>
-  </div>
-);
+  );
+}
