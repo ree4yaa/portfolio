@@ -134,7 +134,7 @@ function GameConsole() {
             <div className="w-2 h-2 bg-retro-red animate-blink" />
             <div className="w-2 h-2 bg-retro-green" />
           </div>
-        </div>w
+        </div>
 
         {/* Screen bezel */}
         <div className="bg-retro-dark border-4 border-retro-dark p-2 sm:p-3" style={{ boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)' }}>
@@ -155,7 +155,6 @@ function GameConsole() {
                  size={12}
                  className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]"
                 />
-                </div>
                 </div>
               </div>
             {/* Screen corner decorations */}
@@ -191,23 +190,17 @@ function GameConsole() {
           <PixelArt grid={controller} size={3} />
         </div>
       </div>
-  );
 
-  return (
-    <div className="relative">
-      {/* Floating pixel art decorations */}
+      {/* Floating decorative sprites around console */}
       <div className="absolute -top-6 -left-6 animate-float hidden sm:block">
         <PixelArt grid={heart} size={4} />
       </div>
-
       <div className="absolute -top-4 -right-8 animate-float-slow hidden sm:block">
         <PixelArt grid={sword} size={4} />
       </div>
-
       <div className="absolute -bottom-4 -left-8 animate-float-slow hidden sm:block" style={{ animationDelay: '0.5s' }}>
         <PixelArt grid={shield} size={4} />
       </div>
-
       <div className="absolute -bottom-6 -right-6 animate-float hidden sm:block" style={{ animationDelay: '1s' }}>
         <PixelArt grid={star} size={4} />
       </div>
