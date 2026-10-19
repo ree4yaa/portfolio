@@ -57,7 +57,7 @@ export function Contact() {
             color="cyan"
           />
           <ContactLink
-            href="https://github.com/reeya"
+            href="https://github.com/ree4yaa"
             target="_blank"
             icon={<Github size={20} />}
             label="GITHUB"
