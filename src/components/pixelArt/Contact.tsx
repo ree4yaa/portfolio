@@ -50,7 +50,7 @@ export function Contact() {
             color="pink"
           />
           <ContactLink
-            href="https://linkedin.com/in/reeya"
+            href="https://www.linkedin.com/in/reeya-pandey-02378a384"
             target="_blank"
             icon={<Linkedin size={20} />}
             label="LINKEDIN"
