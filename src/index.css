@@ -11,11 +11,85 @@
     scroll-behavior: smooth;
   }
 
+  /* ===== DARK THEME (default) ===== */
+  :root,
+  .theme-dark {
+    --retro-bg: #0a0a12;
+    --retro-bg2: #12121f;
+    --retro-panel: #1a1a2e;
+    --retro-panel2: #232347;
+    --retro-pink: #ff2e88;
+    --retro-pink-dim: #b01e60;
+    --retro-purple: #9d4edd;
+    --retro-cyan: #00f0ff;
+    --retro-cyan-dim: #0099aa;
+    --retro-green: #39ff14;
+    --retro-green-dim: #229911;
+    --retro-yellow: #ffe600;
+    --retro-yellow-dim: #b8a800;
+    --retro-orange: #ff8c00;
+    --retro-red: #ff3344;
+    --retro-white: #f0f0f8;
+    --retro-gray: #5a5a7a;
+    --retro-dark: #06060c;
+
+    --crt-tint: rgba(120, 120, 255, 0.015);
+    --crt-scanline: rgba(0, 0, 0, 0.15);
+    --crt-vignette: rgba(0, 0, 0, 0.4);
+    --pixel-grid: rgba(255, 255, 255, 0.03);
+    --console-screen-from: #0a1a0a;
+    --console-screen-to: #0a0a1a;
+    --input-shadow: rgba(0, 0, 0, 0.5);
+    --text-shadow-rgb: 255, 46, 136;
+    --panel-inset-dark: rgba(0, 0, 0, 0.25);
+    --panel-inset-light: rgba(255, 255, 255, 0.07);
+    --noise-1: rgba(157, 78, 221, 0.04);
+    --noise-2: rgba(0, 240, 255, 0.03);
+    --noise-3: rgba(255, 46, 136, 0.02);
+  }
+
+  /* ===== LIGHT THEME — bright daytime sky ===== */
+  .theme-light {
+    --retro-bg: #cfe8ff;
+    --retro-bg2: #b8d8f5;
+    --retro-panel: #ffffff;
+    --retro-panel2: #e8f2ff;
+    --retro-pink: #e0206a;
+    --retro-pink-dim: #a01650;
+    --retro-purple: #7b3fa0;
+    --retro-cyan: #0084a8;
+    --retro-cyan-dim: #005f7a;
+    --retro-green: #1f8a2e;
+    --retro-green-dim: #146a1e;
+    --retro-yellow: #d98a00;
+    --retro-yellow-dim: #a06200;
+    --retro-orange: #d96600;
+    --retro-red: #d02030;
+    --retro-white: #1c2438;
+    --retro-gray: #6a7a90;
+    --retro-dark: #1a2a44;
+
+    --crt-tint: rgba(200, 230, 255, 0.05);
+    --crt-scanline: rgba(20, 40, 80, 0.05);
+    --crt-vignette: rgba(90, 140, 200, 0.18);
+    --pixel-grid: rgba(30, 60, 100, 0.06);
+    --console-screen-from: #d8f5e8;
+    --console-screen-to: #d0e8ff;
+    --input-shadow: rgba(30, 60, 100, 0.14);
+    --text-shadow-rgb: 224, 32, 106;
+    --panel-inset-dark: rgba(20, 40, 80, 0.12);
+    --panel-inset-light: rgba(255, 255, 255, 0.7);
+    --noise-1: rgba(123, 63, 160, 0.05);
+    --noise-2: rgba(0, 132, 168, 0.04);
+    --noise-3: rgba(224, 32, 106, 0.03);
+  }
+
   body {
     background-color: #06060c;
     color: #f0f0f8;
     font-family: '"VT323"', monospace;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
@@ -220,4 +294,24 @@
   border: 8px solid transparent;
   border-top-color: #06060c;
   border-bottom: 0;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--retro-bg2);
+  border: 3px solid var(--retro-dark);
+  cursor: pointer;
+  image-rendering: pixelated;
+  transition: transform 0.08s steps(2);
+}
+.theme-toggle:hover {
+  filter: brightness(1.1);
+}
+.theme-toggle:active {
+  transform: translateY(2px);
 }
