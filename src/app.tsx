@@ -1,4 +1,5 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 import { Hero } from '@/components/pixelArt/Hero';
 import { BottomNav, useActiveSection } from '@/components/pixelArt/BottomNav';
 import { About } from '@/components/pixelArt/About';
@@ -9,9 +10,31 @@ import { Resume } from '@/components/pixelArt/Resume';
 import { Contact } from '@/components/pixelArt/Contact';
 import { Footer } from '@/components/pixelArt/Footer';
 
+type Theme = 'dark' | 'light';
+
+function useTheme() {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const saved = localStorage.getItem('retro-theme');
+    return saved === 'light' ? 'light' : 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.remove('theme-dark', 'theme-light');
+    document.documentElement.classList.add(`theme-${theme}`);
+    localStorage.setItem('retro-theme', theme);
+  }, [theme]);
+
+  const toggle = useCallback(() => {
+    setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+  }, []);
+
+  return { theme, toggle };
+}
+
 function App() {
   const [started, setStarted] = useState(false);
   const activeSection = useActiveSection();
+  const { theme, toggle } = useTheme();
 
   const handleStart = useCallback(() => {
     setStarted(true);
@@ -31,6 +54,21 @@ function App() {
       <div className="crt-overlay" />
       <div className="crt-vignette" />
       <div className="crt-flicker" />
+
+      {/* Theme toggle */}
+      <button
+        className="theme-toggle fixed top-3 right-3 z-[100] font-pixel text-[8px] text-retro-dark"
+        onClick={toggle}
+        aria-label="Toggle theme"
+        title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        style={{ boxShadow: '0 0 0 3px var(--retro-cyan)' }}
+      >
+        {theme === 'dark' ? (
+          <Sun size={18} className="text-retro-yellow" strokeWidth={2.5} />
+        ) : (
+          <Moon size={18} className="text-retro-purple" strokeWidth={2.5} />
+        )}
+      </button>
 
       {/* Hero / Start screen */}
       <Hero onStart={handleStart} />
