@@ -4,7 +4,7 @@ Welcome to my personal portfolio!
 
 I built this portfolio to experiment with web development, improve my frontend skills, and create something that feels a little more *me* than a typical portfolio website.
 
-I integrated this with pixel art (for the beloved pixel art fans :) )
+I integrated this with pixel art.
 
 ##  What's Inside?
 
