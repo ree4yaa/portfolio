@@ -1,4 +1,4 @@
-import { PixelArt } from '@/components/pixelArt';
+import { PixelArt } from '@/components/PixelArt';
 import { PixelPanel } from '@/components/pixelArt/PixelPanel';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { avatar, controller, heart, sword, shield, star } from '@/components/pixelArt/sprites';
@@ -40,6 +40,11 @@ export function About() {
 
       {/* Section header */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
+        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px , 0 0 20px rgba(0,240,255,0.2)' }}>
+          <span className="font-pixel text-[10px] sm:text-[14px] text-pixel inline-flex items-center gap-2">
+            LEVEL 01
+          </span>
+        </div>
         <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
           ABOUT ME
         </h2>
@@ -58,7 +63,7 @@ export function About() {
           <PixelPanel color="pink" title="PLAYER PROFILE" icon={<User size={14} className="text-retro-pink" />}>
             <div className="space-y-0">
               <InfoLine label="NAME:" value="Reeya" color="text-retro-pink" />
-              <InfoLine label="ROLE:" value="CSE-Student" color="text-retro-cyan" />
+              <InfoLine label="ROLE:" value="CSE / Software Developer" color="text-retro-cyan" />
               <InfoLine label="LOCATION:" value="India" color="text-retro-green" />
               <InfoLine label="STATUS:" value="Learning + Building" color="text-retro-yellow" />
             </div>
@@ -67,9 +72,9 @@ export function About() {
           {/* Card 2: CURRENT MISSION */}
           <PixelPanel color="yellow" title="CURRENT MISSION" icon={<Target size={14} className="text-retro-yellow" />}>
             <div className="space-y-2">
-              <MissionRow text="Networking" icon="▣" />
+              <MissionRow text="Building projects" icon="▣" />
               <MissionRow text="Cybersecurity" icon="▣" />
-              <MissionRow text="AI Tools/Automations" icon="▣" />
+              <MissionRow text="AI Automation" icon="▣" />
               <MissionRow text="FOSS" icon="▣" />
             </div>
           </PixelPanel>
@@ -80,8 +85,6 @@ export function About() {
               <InfoLine label="DEGREE:" value="B.Tech CSE-DS" color="text-retro-cyan" />
               <InfoLine label="UNIVERSITY:" value="GGSIPU" color="text-retro-white" />
               <InfoLine label="DURATION:" value="2025–Present" color="text-retro-green" />
-              <div className="mt-2 flex items-center gap-2">
-              </div>
             </div>
           </PixelPanel>
 
@@ -91,11 +94,14 @@ export function About() {
               <SkillTag label="HTML" />
               <SkillTag label="CSS" />
               <SkillTag label="JavaScript" />
-              <SkillTag label="TypeScript" />
               <SkillTag label="React" />
               <SkillTag label="Python" />
               <SkillTag label="Git/GitHub" />
               <SkillTag label="Linux" />
+              <SkillTag label="Networking" />
+            </div>
+            <div className="mt-3 flex items-center gap-2">
+              <PixelArt grid={star} size={3} />
             </div>
           </PixelPanel>
         </div>
@@ -121,8 +127,8 @@ function GameConsole() {
     <div ref={ref} className={`relative ${visible ? 'animate-pop-in' : 'opacity-0'}`}>
       {/* Console body */}
       <div
-        className="relative bg-gradient-to-b from-retro-purple to-[#3a1a5a] border-4 border-retro-dark p-4 sm:p-6"
-        style={{ boxShadow: '0 0 0 4px #9d4edd, 0 0 30px rgba(157,78,221,0.3)' }}
+        className="relative border-4 border-retro-dark p-4 sm:p-6"
+        style={{ background: 'linear-gradient(to bottom, var(--retro-purple), var(--retro-panel2))', boxShadow: '0 0 0 4px var(--retro-purple), 0 0 30px rgba(157,78,221,0.3)' }}
       >
         {/* Console top decoration */}
         <div className="absolute -top-2 left-4 right-4 h-2 bg-retro-purple border-2 border-retro-dark" />
@@ -138,7 +144,7 @@ function GameConsole() {
         {/* Screen bezel */}
         <div className="bg-retro-dark border-4 border-retro-dark p-2 sm:p-3" style={{ boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)' }}>
           {/* Screen */}
-          <div className="relative bg-gradient-to-br from-[#0a1a0a] to-[#0a0a1a] border-2 border-retro-gray/30 overflow-hidden" style={{ width: '224px', height: '224px' }}>
+          <div className="relative border-2 border-retro-gray/30 overflow-hidden" style={{ width: '224px', height: '224px', background: 'linear-gradient(135deg, var(--console-screen-from), var(--console-screen-to))' }}>
             {/* Scanlines on screen */}
             <div
               className="absolute inset-0 pointer-events-none opacity-30"
@@ -149,13 +155,9 @@ function GameConsole() {
             {/* Screen content: avatar */}
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <div className="animate-float">
-               <PixelArt
-                 grid={avatar}
-                 size={12}
-                 className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]"
-                />
-                </div>
+                <PixelArt grid={avatar} size={12} className="drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]" />
               </div>
+            </div>
             {/* Screen corner decorations */}
             <div className="absolute top-1 left-1 font-pixel text-[5px] text-retro-green">●</div>
             <div className="absolute top-1 right-1 font-pixel text-[5px] text-retro-yellow">★</div>
