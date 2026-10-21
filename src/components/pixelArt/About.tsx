@@ -85,6 +85,7 @@ export function About() {
               <InfoLine label="DEGREE:" value="B.Tech CSE-DS" color="text-retro-cyan" />
               <InfoLine label="UNIVERSITY:" value="GGSIPU" color="text-retro-white" />
               <InfoLine label="DURATION:" value="2025–Present" color="text-retro-green" />
+              <InfoLine label="GPA:" value="8.5/10" color="text-retro-yellow" />
             </div>
           </PixelPanel>
 
