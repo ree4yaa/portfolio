@@ -40,7 +40,6 @@ export function About() {
 
       {/* Section header */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
-        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #00f0ff, 0 0 20px rgba(0,240,255,0.2)' }}></div>
         <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
           ABOUT ME
         </h2>
