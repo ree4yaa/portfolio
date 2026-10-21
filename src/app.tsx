@@ -38,7 +38,6 @@ function App() {
 
   const handleStart = useCallback(() => {
     setStarted(true);
-    // Smooth scroll to about section after the transition
     setTimeout(() => {
       document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
     }, 300);
@@ -49,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-retro-dark text-retro-white">
+    <div className="relative min-h-screen bg-retro-bg text-retro-white">
       {/* CRT / Scanline overlays */}
       <div className="crt-overlay" />
       <div className="crt-vignette" />
