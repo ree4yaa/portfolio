@@ -12,7 +12,7 @@ interface Skill {
 
 interface SkillCategory {
   name: string;
-  color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
+  color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple' | 'Pink' | 'Lavender';
   icon: typeof Sword;
   skills: Skill[];
 }
@@ -20,7 +20,7 @@ interface SkillCategory {
 const categories: SkillCategory[] = [
   {
     name: 'Cybersecurity',
-    color: 'green',
+    color: 'Pink',
     icon: Brain,
     skills: [
      { name: 'Linux CLI', level: 70, desc: 'Command line proficiency & shell scripting', unlocked: true },
@@ -42,7 +42,7 @@ const categories: SkillCategory[] = [
     },
   {
     name: 'Web Development',
-    color: 'cyan',
+    color: 'Lavender',
     icon: Code2,
     skills: [
       { name: 'HTML', level: 90, desc: 'Semantic markup & accessibility', unlocked: true },
@@ -79,10 +79,11 @@ const categories: SkillCategory[] = [
 
 const colorHex: Record<string, string> = {
   pink: '#ff2e88',
-  cyan: '#00f0ff',
+  Lavender: '#A78BFA',
   green: '#39ff14',
-  yellow: '#ffe600',
+  yellow: '#F59E0B',
   purple: '#9d4edd',
+  'Pink': '#F472B6',
 };
 
 export function Skills() {
@@ -100,7 +101,7 @@ export function Skills() {
       {/* Header */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
         <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #39ff14, 0 0 20px rgba(57,255,20,0.2)' }}>
-          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-green text-pixel-shadow-green">
+          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-green">
             SKILL TREE
           </span>
         </div>
