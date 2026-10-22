@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
-import { Hero } from '@/components/pixelArt/Hero';
 import { BottomNav, useActiveSection } from '@/components/pixelArt/BottomNav';
 import { About } from '@/components/pixelArt/About';
 import { Skills } from '@/components/pixelArt/Skills';
@@ -9,6 +8,7 @@ import { Experience } from '@/components/pixelArt/Experience';
 import { Resume } from '@/components/pixelArt/Resume';
 import { Contact } from '@/components/pixelArt/Contact';
 import { Footer } from '@/components/pixelArt/Footer';
+import { DancingHero } from './components/pixelArt/Hero';
 
 type Theme = 'dark' | 'light';
 
@@ -70,7 +70,7 @@ function App() {
       </button>
 
       {/* Hero / Start screen */}
-      <Hero onStart={handleStart} />
+      <DancingHero onStart={handleStart} />
 
       {/* Main content — revealed after START */}
       <main className={started ? 'opacity-100' : 'opacity-30 pointer-events-none'}>
