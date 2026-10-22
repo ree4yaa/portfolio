@@ -80,7 +80,7 @@ const categories: SkillCategory[] = [
 const colorHex: Record<string, string> = {
   pink: '#ff2e88',
   Lavender: '#A78BFA',
-  green: '#39ff14',
+  green: '#22C55E',
   yellow: '#F59E0B',
   purple: '#9d4edd',
   'Pink': '#F472B6',

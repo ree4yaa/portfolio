@@ -13,13 +13,12 @@ interface Project {
   github: string;
   demo: string;
   color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
-  difficulty: string;
   bossArt: PixelGrid;
 }
 
 /* === Color palette for boss sprites === */
 const _ = null;
-const G = '#39ff14', Gd = '#1a8800', R = '#ff3344', Y = '#ffe600', Br = '#8b5a2b', Brd = '#5a3a1a';
+const G = '#92b68c', Gd = '#1a8800', R = '#ff3344', Y = '#ffe600', Br = '#8b5a2b', Brd = '#5a3a1a';
 const P = '#ff2e88', Pd = '#b01e60', C = '#00f0ff', Cd = '#0099aa', V = '#9d4edd', Vd = '#6a2d99';
 const K = '#06060c', W = '#f0f0f8', Sk = '#ffccaa', Hr = '#3a1a00', Bl = '#2244aa', Bld = '#112266';
 
@@ -72,7 +71,6 @@ const projects: Project[] = [
     github: 'https://github.com/ree4yaa/Tic-Tac-Toe',
     demo: 'https://tic-tac-toe.demo',
     color: 'green',
-    difficulty: '★☆☆',
     bossArt: floraBoss,
   },
   {
@@ -83,7 +81,6 @@ const projects: Project[] = [
     github: 'https://github.com/ree4yaa/say-it-back',
     demo: 'https://sayitback.demo',
     color: 'pink',
-    difficulty: '★★☆',
     bossArt: sayItBoss,
   },
   {
@@ -94,7 +91,6 @@ const projects: Project[] = [
     github: 'https://github.com/ree4yaa/synapz',
     demo: 'https://synapz.demo',
     color: 'cyan',
-    difficulty: '★★★',
     bossArt: synapzBoss,
   },
 ];
@@ -102,8 +98,8 @@ const projects: Project[] = [
 const colorHex: Record<string, string> = {
   pink: '#ff2e88',
   cyan: '#00f0ff',
-  green: '#39ff14',
-  yellow: '#ffe600',
+  green: '#22C55E',
+  yellow: '#F59E0B',
   purple: '#9d4edd',
 };
 
@@ -201,12 +197,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               {t}
             </span>
           ))}
-        </div>
-
-        {/* Difficulty */}
-        <div className="flex items-center justify-between mb-4 pb-2 border-b border-retro-gray/20">
-          <span className="font-pixel text-[8px] text-retro-white/80">Difficulty</span>
-          <span className="font-pixel text-[8px]" style={{ color: c }}>{project.difficulty}</span>
         </div>
 
         {/* Buttons */}
