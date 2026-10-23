@@ -68,8 +68,7 @@ function App() {
           <Moon size={18} className="text-retro-purple" strokeWidth={2.5} />
         )}
       </button>
-
-      {/* Hero / Start screen */}
+      
       <DancingHero onStart={handleStart} />
 
       {/* Main content — revealed after START */}
