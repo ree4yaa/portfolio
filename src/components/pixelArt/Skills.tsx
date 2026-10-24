@@ -26,7 +26,8 @@ const categories: SkillCategory[] = [
      { name: 'Linux CLI', level: 70, desc: 'Command line proficiency & shell scripting', unlocked: true },
       { name: 'Networking fundamentals', level: 90, desc: 'Core networking concepts & protocols', unlocked: true },
       { name: 'HTTP, DNS & web fundamentals', level: 85, desc: 'Understanding web protocols & services', unlocked: true },
-      { name: 'Nmap', level: 65, desc: 'Network scanning & enumeration', unlocked: true},
+      { name: 'Nmap', level: 75, desc: 'Network scanning & reconnaissance', unlocked: true },
+      { name: 'Bruteforce & password cracking', level: 60, desc: 'Ethical hacking techniques & tools', unlocked: true }
     ],
   },
   {
