@@ -26,6 +26,7 @@ const categories: SkillCategory[] = [
      { name: 'Linux CLI', level: 70, desc: 'Command line proficiency & shell scripting', unlocked: true },
       { name: 'Networking fundamentals', level: 90, desc: 'Core networking concepts & protocols', unlocked: true },
       { name: 'HTTP, DNS & web fundamentals', level: 85, desc: 'Understanding web protocols & services', unlocked: true },
+      { name: 'Nmap', level: 65, desc: 'Network scanning & enumeration', unlocked: true},
     ],
   },
   {
@@ -70,7 +71,6 @@ const categories: SkillCategory[] = [
     skills: [
       { name: 'Git / GitHub', level: 80, desc: 'Version control & collaboration', unlocked: true },
       { name: 'VS Code', level: 90, desc: 'Primary development environment', unlocked: true },
-      { name: 'Nmap', level: 65, desc: 'Network scanning & enumeration', unlocked: true},
       { name: 'Wireshark', level: 35, desc: 'Network analysis & troubleshooting', unlocked: true },
       {name: 'Hydra', level: 50, desc: 'Password cracking & brute-force attacks', unlocked: true}
     ],
