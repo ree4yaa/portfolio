@@ -8,7 +8,7 @@ import { Experience } from '@/components/pixelArt/Experience';
 import { Resume } from '@/components/pixelArt/Resume';
 import { Contact } from '@/components/pixelArt/Contact';
 import { Footer } from '@/components/pixelArt/Footer';
-import { DancingHero } from './components/pixelArt/Hero';
+import {Hero} from './components/pixelArt/Hero';
 
 type Theme = 'dark' | 'light';
 
@@ -69,7 +69,7 @@ function App() {
         )}
       </button>
       
-      <DancingHero onStart={handleStart} />
+      <Hero onStart={handleStart} />
 
       {/* Main content — revealed after START */}
       <main className={started ? 'opacity-100' : 'opacity-30 pointer-events-none'}>
