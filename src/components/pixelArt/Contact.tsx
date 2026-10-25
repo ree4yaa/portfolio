@@ -85,7 +85,7 @@ export function Contact() {
           {/* Dialogue text */}
           <div className="px-4 py-3 border-b-2 border-retro-gray/20">
             <p className="font-mono text-base text-retro-cyan">
-              "Hello, adventurer! Send me a message and let's start a new quest together."
+              "Send me a message and let's start a new quest together."
               <span className="cursor-blink" />
             </p>
           </div>
@@ -102,7 +102,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full bg-retro-dark border-4 border-retro-dark px-3 py-2 font-mono text-base text-retro-green focus:outline-none focus:border-retro-pink"
                 style={{ boxShadow: 'inset 2px 2px 0 rgba(0,0,0,0.5)' }}
-                placeholder="Enter your name..."
+                placeholder="Enter your name"
               />
             </div>
 
