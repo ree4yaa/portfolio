@@ -16,7 +16,7 @@ interface Achievement {
 
 const achievements: Achievement[] = [
   {
-    title: 'HACKATHON PARTICIPATOR',
+    title: 'HACKATHONS',
     desc: 'Participated in multiple hackathons, building projects under time pressure.',
     category: 'HACKATHONS',
     icon: Flame,
