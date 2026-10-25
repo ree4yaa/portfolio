@@ -116,7 +116,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full bg-retro-dark border-4 border-retro-dark px-3 py-2 font-mono text-base text-retro-cyan focus:outline-none focus:border-retro-cyan"
                 style={{ boxShadow: 'inset 2px 2px 0 rgba(0,0,0,0.5)' }}
-                placeholder="Enter your email..."
+                placeholder="Enter your email"
               />
             </div>
 
