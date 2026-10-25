@@ -40,7 +40,7 @@ const achievements: Achievement[] = [
     color: 'pink',
   },
   {
-    title: 'OPEN SOURCE KNIGHT',
+    title: 'OPEN SOURCE CONTRIBUTIONS',
     desc: 'Contributing to open-source projects and collaborating with the community.',
     category: 'OPEN SOURCE',
     icon: GitBranch,
