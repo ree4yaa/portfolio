@@ -18,14 +18,12 @@ const achievements: Achievement[] = [
     title: 'HACKATHONS',
     desc: 'Participated in multiple hackathons, building projects under time pressure.',
     icon: Flame,
-    category: 'HACKATHONS',
     badgeArt: trophy,
     color: 'yellow',
   },
   {
     title: 'WORKSHOPS',
     desc: 'Attended technical workshops on web dev, cybersecurity, and cloud computing.',
-    category: 'WORKSHOPS',
     icon: GraduationCap,
     badgeArt: star,
     color: 'cyan',
@@ -33,7 +31,6 @@ const achievements: Achievement[] = [
   {
     title: 'EVENTS',
     desc: 'Active participant in tech events, coding competitions, and meetups.',
-    category: 'EVENTS',
     icon: Medal,
     badgeArt: heart,
     color: 'pink',
@@ -41,7 +38,6 @@ const achievements: Achievement[] = [
   {
     title: 'OPEN SOURCE CONTRIBUTIONS',
     desc: 'Contributing to open-source projects and collaborating with the community.',
-    category: 'OPEN SOURCE',
     icon: GitBranch,
     badgeArt: sword,
     color: 'purple',
