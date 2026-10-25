@@ -25,7 +25,7 @@ const achievements: Achievement[] = [
   },
   {
     title: 'WORKSHOP MASTER',
-    desc: 'Attended technical workshops on web dev, AI/ML, and cloud computing.',
+    desc: 'Attended technical workshops on web dev, cybersecurity, and cloud computing.',
     category: 'WORKSHOPS',
     icon: GraduationCap,
     badgeArt: star,
