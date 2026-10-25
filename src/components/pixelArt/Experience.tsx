@@ -24,7 +24,7 @@ const achievements: Achievement[] = [
     color: 'yellow',
   },
   {
-    title: 'WORKSHOP MASTER',
+    title: 'WORKSHOPS',
     desc: 'Attended technical workshops on web dev, cybersecurity, and cloud computing.',
     category: 'WORKSHOPS',
     icon: GraduationCap,
