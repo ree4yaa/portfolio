@@ -16,7 +16,7 @@ interface Achievement {
 
 const achievements: Achievement[] = [
   {
-    title: 'HACKATHON WARRIOR',
+    title: 'HACKATHON PARTICIPATOR',
     desc: 'Participated in multiple hackathons, building projects under time pressure.',
     category: 'HACKATHONS',
     icon: Flame,
@@ -30,14 +30,6 @@ const achievements: Achievement[] = [
     icon: GraduationCap,
     badgeArt: star,
     color: 'cyan',
-  },
-  {
-    title: 'CERTIFIED CODER',
-    desc: 'Earned certifications in programming, React, and data science courses.',
-    category: 'CERTIFICATIONS',
-    icon: Award,
-    badgeArt: shield,
-    color: 'green',
   },
   {
     title: 'EVENT PARTICIPANT',
