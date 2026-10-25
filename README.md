@@ -1,10 +1,6 @@
-# My Portfolio
+# Description
 
-Welcome to my personal portfolio!
-
-I built this portfolio to experiment with web development, improve my frontend skills, and create something that feels a little more *me* than a typical portfolio website.
-
-I integrated this with pixel art.
+I made this using my frontend knowledge. And, also being a pixel art enthusiasts :3, i integrated this with pixel art
 
 ##  What's Inside?
 
@@ -32,13 +28,9 @@ I'm currently exploring and strengthening my skills in:
 * Python
 * AI & automation
 
-I'm still learning, experimenting, breaking things, and figuring out how everything works — one project at a time.
-
 ## Featured Projects
 
 Some of the projects I've worked on are featured directly on my portfolio.
-
-Each project represents something I wanted to learn, experiment with, or build from scratch.
 
 ## Connect With Me
 
