@@ -27,7 +27,7 @@ export function Contact() {
       {/* Header */}
       <div className="relative z-10 max-w-4xl mx-auto text-center mb-12">
         <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #ff2e88, 0 0 20px rgba(255,46,136,0.2)' }}>
-          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-pink text-pixel-shadow">
+          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-pink">
             FINAL LEVEL
           </span>
         </div>
