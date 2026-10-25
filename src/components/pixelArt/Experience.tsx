@@ -32,7 +32,7 @@ const achievements: Achievement[] = [
     color: 'cyan',
   },
   {
-    title: 'EVENT PARTICIPANT',
+    title: 'EVENTS',
     desc: 'Active participant in tech events, coding competitions, and meetups.',
     category: 'EVENTS',
     icon: Medal,
