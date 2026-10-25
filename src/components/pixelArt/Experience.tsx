@@ -8,6 +8,7 @@ import type { PixelGrid } from '@/components/pixelArt';
 interface Achievement {
   title: string;
   desc: string;
+  category?: string;
   icon: typeof Trophy;
   badgeArt: PixelGrid;
   color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
@@ -18,6 +19,7 @@ const achievements: Achievement[] = [
     title: 'HACKATHONS',
     desc: 'Participated in multiple hackathons, building projects under time pressure.',
     icon: Flame,
+    category: 'HACKATHONS',
     badgeArt: trophy,
     color: 'yellow',
   },
