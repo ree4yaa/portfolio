@@ -8,7 +8,6 @@ import type { PixelGrid } from '@/components/pixelArt';
 interface Achievement {
   title: string;
   desc: string;
-  category?: string;
   icon: typeof Trophy;
   badgeArt: PixelGrid;
   color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
