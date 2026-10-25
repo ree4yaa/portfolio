@@ -130,7 +130,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="w-full bg-retro-dark border-4 border-retro-dark px-3 py-2 font-mono text-base text-retro-green focus:outline-none focus:border-retro-green resize-none"
                 style={{ boxShadow: 'inset 2px 2px 0 rgba(0,0,0,0.5)' }}
-                placeholder="Type your message..."
+                placeholder="Type your message"
               />
             </div>
 
