@@ -53,7 +53,7 @@ export function Resume() {
           <div className="font-pixel text-[7px] text-retro-yellow mb-2">★★★ RARE ITEM ★★★</div>
 
           {/* Item name */}
-          <h3 className="font-pixel text-[12px] sm:text-[16px] text-retro-green text-pixel-shadow-green mb-3">
+          <h3 className="font-pixel text-[12px] sm:text-[16px] text-retro-green">
             REEYA_RESUME.PDF
           </h3>
 
