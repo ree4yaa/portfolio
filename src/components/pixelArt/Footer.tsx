@@ -35,7 +35,7 @@ export function Footer() {
         </h2>
 
         {/* CONTINUE BUILDING... */}
-        <p className="font-pixel text-[10px] sm:text-[14px] text-retro-cyan text-pixel-shadow-cyan mb-2 animate-pulse">
+        <p className="font-pixel text-[10px] sm:text-[14px] text-retro-cyan mb-2 animate-pulse">
           BY REEYA
         </p>
 
@@ -50,10 +50,10 @@ export function Footer() {
         <p className="font-mono text-base text-retro-gray mt-6">
           © 2026 All Rights Reserved.
         </p>
-        <p className="font-mono text-sm text-retro-gray/60 mt-1">
+        <p className="font-mono text-sm text-retro-pink/60 mt-1">
           Built with React + Vite + Tailwind CSS
         </p>
-        <p className="font-pixel text-[6px] text-retro-gray/40 mt-3">
+        <p className="font-pixel text-[6px] text-retro-pink/40 mt-3">
           ★ THANK YOU FOR PLAYING ★
         </p>
       </div>
