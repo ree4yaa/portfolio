@@ -3,6 +3,7 @@ import { PixelPanel } from '@/components/pixelArt/PixelPanel';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { avatar, controller, heart, sword, shield, star } from '@/components/pixelArt/sprites';
 import { User, Target, BookOpen, Zap } from 'lucide-react';
+import type { ReactNode } from 'react';
 
 interface InfoRow {
   label: string;
@@ -39,8 +40,8 @@ export function About() {
 
       {/* Section header */}
       <div className="relative z-10 max-w-6xl mx-auto text-center mb-12">
-        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px , 0 0 20px rgba(0,240,255,0.2)' }}>
-          <span className="font-pixel text-[10px] sm:text-[14px] text-pixel inline-flex items-center gap-2">
+        <div className="inline-block bg-retro-bg2 border-4 border-retro-dark px-6 py-3 mb-4" style={{ boxShadow: '0 0 0 4px #00f0ff, 0 0 20px rgba(0,240,255,0.2)' }}>
+          <span className="font-pixel text-[10px] sm:text-[14px] text-retro-cyan text-pixel-shadow-cyan">
             LEVEL 01
           </span>
         </div>
@@ -78,14 +79,14 @@ export function About() {
             </div>
           </PixelPanel>
 
-          {/* Card 3: EDUCATION LOG */}
-          <PixelPanel color="cyan" title="EDUCATION LOG" icon={<BookOpen size={14} className="text-retro-cyan" />}>
+          {/* Card 3: TRAINING LOG */}
+          <PixelPanel color="cyan" title="TRAINING LOG" icon={<BookOpen size={14} className="text-retro-cyan" />}>
             <div className="space-y-1">
               <InfoLine label="DEGREE:" value="B.Tech CSE-DS" color="text-retro-cyan" />
               <InfoLine label="UNIVERSITY:" value="GGSIPU" color="text-retro-white" />
               <InfoLine label="DURATION:" value="2025–Present" color="text-retro-green" />
-              <InfoLine label="GPA:" value="8.5/10" color="text-retro-yellow" />
-            </div>
+              <InfoLine label="GPA:" value="8.5/10" color = "text-retro-yellow" />
+              </div>
           </PixelPanel>
 
           {/* Card 4: SKILLS MASTER */}
@@ -145,7 +146,6 @@ function GameConsole() {
         <div className="bg-retro-dark border-4 border-retro-dark p-2 sm:p-3" style={{ boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)' }}>
           {/* Screen */}
           <div className="relative border-2 border-retro-gray/30 overflow-hidden" style={{ width: '224px', height: '224px', background: 'linear-gradient(135deg, var(--console-screen-from), var(--console-screen-to))' }}>
-          
             {/* Scanlines on screen */}
             <div
               className="absolute inset-0 pointer-events-none opacity-30"
