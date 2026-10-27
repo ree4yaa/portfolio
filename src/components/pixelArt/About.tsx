@@ -3,7 +3,6 @@ import { PixelPanel } from '@/components/pixelArt/PixelPanel';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { avatar, controller, heart, sword, shield, star } from '@/components/pixelArt/sprites';
 import { User, Target, BookOpen, Zap } from 'lucide-react';
-import type { ReactNode } from 'react';
 
 interface InfoRow {
   label: string;
@@ -146,6 +145,7 @@ function GameConsole() {
         <div className="bg-retro-dark border-4 border-retro-dark p-2 sm:p-3" style={{ boxShadow: 'inset 0 0 20px rgba(0,0,0,0.8)' }}>
           {/* Screen */}
           <div className="relative border-2 border-retro-gray/30 overflow-hidden" style={{ width: '224px', height: '224px', background: 'linear-gradient(135deg, var(--console-screen-from), var(--console-screen-to))' }}>
+          
             {/* Scanlines on screen */}
             <div
               className="absolute inset-0 pointer-events-none opacity-30"
