@@ -214,7 +214,7 @@ export function Skills() {
                         className="absolute -top-16 left-1/2 -translate-x-1/2 z-20 bg-retro-dark border-2 border-retro-dark px-3 py-2 whitespace-nowrap animate-pop-in tooltip-arrow"
                         style={{ boxShadow: `0 0 0 2px ${colorHex[cat.color]}` }}
                       >
-                        <p className="font-mono text-sm text-retro-white">{skill.desc}</p>
+                        <p className="font-mono text-sm text-retro-pink">{skill.desc}</p>
                         <p className="font-pixel text-[6px] mt-1" style={{ color: colorHex[cat.color] }}>
                           PROFICIENCY: {skill.level}%
                         </p>
