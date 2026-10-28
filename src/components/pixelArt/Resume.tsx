@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { PixelArt } from '@/components/pixelArt';
 import { PixelButton } from '@/components/pixelArt/PixelButton';
 import { useReveal } from '@/components/pixelArt/useReveal';
-import { FileText, Download, Sparkles } from 'lucide-react';
+import { FileText, Download, Sparkles, Eye, X } from 'lucide-react';
 import { star } from '@/components/pixelArt/sprites';
 
 export function Resume() {
   const { ref, visible } = useReveal();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="relative w-full py-20 px-4 overflow-hidden bg-retro-bg pixel-noise">
@@ -61,7 +63,7 @@ export function Resume() {
           <div className="grid grid-cols-3 gap-2 mb-6 font-mono text-xs text-retro-white/60">
             <div className="border border-retro-gray/30 py-1">
               <div className="font-pixel text-[6px] text-retro-cyan">PAGES</div>
-              <div className="text-base text-retro-white">02</div>
+              <div className="text-base text-retro-white">01</div>
             </div>
             <div className="border border-retro-gray/30 py-1">
               <div className="font-pixel text-[6px] text-retro-pink">FORMAT</div>
@@ -69,28 +71,72 @@ export function Resume() {
             </div>
             <div className="border border-retro-gray/30 py-1">
               <div className="font-pixel text-[6px] text-retro-yellow">SIZE</div>
-              <div className="text-base text-retro-white">2.1MB</div>
+              <div className="text-base text-retro-white">1.2MB</div>
             </div>
           </div>
 
-          {/* Download button */}
-          <PixelButton
-            href="#"
-            download
-            color="green"
-            size="md"
-            glow
-            className="w-full"
-          > 
-          <Download size={14} /> DOWNLOAD RESUME
-          </PixelButton>
+            {/* Download button */}
+            <PixelButton
+              href="/Resume  (1).pdf"
+              download="Reeya_Pandey_Resume.pdf"
+              color="green"
+              size="md"
+              glow
+              className="w-full"
+            > 
+              <Download size={14} /> DOWNLOAD RESUME
+            </PixelButton>
+          </div>
 
           <div className="mt-4 flex items-center justify-center gap-1">
             <Sparkles size={10} className="text-retro-yellow" />
-            <span className="font-mono text-sm text-retro-gray">Equip to view full stats</span>
+            <span className="font-mono text-sm text-retro-gray">Click equip to view full stats</span>
           </div>
         </div>
-      </div>
+
+      {/* Retro Modal Overlay for PDF Viewing */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-4xl bg-retro-panel border-4 border-retro-dark p-4 sm:p-6 shadow-2xl" style={{ boxShadow: '0 0 0 4px #00ffff, 0 0 40px rgba(0,255,255,0.3)' }}>
+            
+            {/* Modal Header */}
+            <div className="flex justify-between items-center mb-4 border-b border-retro-gray/30 pb-2">
+              <h3 className="font-pixel text-[10px] sm:text-[12px] text-retro-cyan">
+                // INSPECTING: REEYA_RESUME.PDF
+              </h3>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-1 bg-retro-bg2 border-2 border-retro-dark text-retro-white hover:bg-red-900/50 transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Embedded PDF Viewer */}
+            <div className="w-full h-[70vh] bg-retro-bg border-2 border-retro-dark overflow-hidden">
+              <embed
+                src="/Resume  (1).pdf#view=FitH"
+                type="application/pdf"
+                width="100%"
+                height="100%"
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Modal Footer Controls */}
+            <div className="mt-4 flex justify-between items-center">
+              <span className="font-mono text-xs text-retro-gray">Status: Ready for deployment</span>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-pixel text-[8px] px-4 py-2 bg-retro-dark text-retro-white border-2 border-retro-cyan hover:bg-retro-cyan hover:text-black transition-colors"
+              >
+                CLOSE [ESC]
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
     </section>
   );
 }

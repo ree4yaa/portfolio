@@ -11,7 +11,6 @@ interface Project {
   description: string;
   tech: string[];
   github: string;
-  demo: string;
   color: 'pink' | 'cyan' | 'green' | 'yellow' | 'purple';
   bossArt: PixelGrid;
 }
@@ -69,7 +68,6 @@ const projects: Project[] = [
     description: 'A fun and interactive Tic-Tac-Toe game, featuring a clean UI, smooth gameplay, and dynamic win/draw detection.',
     tech: ['JavaScript', 'HTML', 'CSS'],
     github: 'https://github.com/ree4yaa/Tic-Tac-Toe',
-    demo: 'https://tic-tac-toe.demo',
     color: 'green',
     bossArt: floraBoss,
   },
@@ -79,7 +77,6 @@ const projects: Project[] = [
     description: 'An interactive communication-focused web project. Features real-time feedback and engaging conversation mechanics for better user interaction.',
     tech: ['JavaScript', 'WebRTC', 'Node.js', 'CSS'],
     github: 'https://github.com/ree4yaa/say-it-back',
-    demo: 'https://sayitback.demo',
     color: 'pink',
     bossArt: sayItBoss,
   },
@@ -89,7 +86,6 @@ const projects: Project[] = [
     description: 'This is a modern, interactive quiz platform that combines learning and gameplay, allowing users to test their knowledge through dynamic quizzes.',
     tech: ['React', 'TypeScript', 'Tailwind', 'API'],
     github: 'https://github.com/ree4yaa/synapz',
-    demo: 'https://synapz.demo',
     color: 'cyan',
     bossArt: synapzBoss,
   },
@@ -201,12 +197,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         {/* Buttons */}
         <div className="flex flex-col gap-2">
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 gap-2">
             <PixelButton href={project.github} target="_blank" color="pink" size="sm" className="w-full">
-              <Github size={12} /> GITHUB
-            </PixelButton>
-            <PixelButton href={project.demo} target="_blank" color="cyan" size="sm" className="w-full">
-              <ExternalLink size={12} /> DEMO
+              <Github size={15} /> GITHUB
             </PixelButton>
           </div>
         </div>
