@@ -78,8 +78,8 @@ export function Resume() {
 
             {/* Download button */}
             <PixelButton
-              href="/Resume  (1).pdf"
-              download="Reeya_Pandey_Resume.pdf"
+              href="@/components/pixelArt/reeya_resume.pdf"
+              target="_blank" 
               color="green"
               size="md"
               glow
@@ -98,7 +98,7 @@ export function Resume() {
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4 border-b border-retro-gray/30 pb-2">
               <h3 className="font-pixel text-[10px] sm:text-[12px] text-retro-cyan">
-                // INSPECTING: REEYA_RESUME.PDF
+                // INSPECTING: REEYA_RESUME.PNG
               </h3>
               <button
                 onClick={() => setIsOpen(false)}
@@ -111,8 +111,8 @@ export function Resume() {
             {/* Embedded PDF Viewer */}
             <div className="w-full h-[70vh] bg-retro-bg border-2 border-retro-dark overflow-hidden">
               <embed
-                src="/Resume  (1).pdf#view=FitH"
-                type="application/pdf"
+                src="/Resume  (1).png#view=FitH"
+                type="application/png"
                 width="100%"
                 height="100%"
                 className="w-full h-full"
@@ -121,7 +121,6 @@ export function Resume() {
 
             {/* Modal Footer Controls */}
             <div className="mt-4 flex justify-between items-center">
-              <span className="font-mono text-xs text-retro-gray">Status: Ready for deployment</span>
               <button
                 onClick={() => setIsOpen(false)}
                 className="font-pixel text-[8px] px-4 py-2 bg-retro-dark text-retro-white border-2 border-retro-cyan hover:bg-retro-cyan hover:text-black transition-colors"
