@@ -44,7 +44,7 @@ export function Contact() {
         {/* Quick links */}
         <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
           <ContactLink
-            href="reeyaa0812@gmail.com"
+            href="mailto:reeyaa0812@gmail.com?subject=Hello%20from%20Portfolio&body=Hi%20Reeya,%20"
             icon={<Mail size={20} />}
             label="EMAIL"
             color="pink"
