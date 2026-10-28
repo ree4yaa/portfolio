@@ -78,7 +78,7 @@ export function Resume() {
 
             {/* Download button */}
             <PixelButton
-              href="@/components/pixelArt/reeya_resume.pdf"
+              href="https://drive.google.com/file/d/1yauDQloXOkdRkk4zErA26oPaaru3Dcsb/preview"
               target="_blank" 
               color="green"
               size="md"
@@ -98,7 +98,7 @@ export function Resume() {
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4 border-b border-retro-gray/30 pb-2">
               <h3 className="font-pixel text-[10px] sm:text-[12px] text-retro-cyan">
-                // INSPECTING: REEYA_RESUME.PNG
+                // INSPECTING: REEYA_RESUME.PDF
               </h3>
               <button
                 onClick={() => setIsOpen(false)}
@@ -111,8 +111,7 @@ export function Resume() {
             {/* Embedded PDF Viewer */}
             <div className="w-full h-[70vh] bg-retro-bg border-2 border-retro-dark overflow-hidden">
               <embed
-                src="/Resume  (1).png#view=FitH"
-                type="application/png"
+                src="https://drive.google.com/file/d/1yauDQloXOkdRkk4zErA26oPaaru3Dcsb/preview"
                 width="100%"
                 height="100%"
                 className="w-full h-full"
