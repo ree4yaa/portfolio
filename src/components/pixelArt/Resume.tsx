@@ -75,6 +75,7 @@ export function Resume() {
             </div>
           </div>
 
+
             {/* Download button */}
             <PixelButton
               href="/Resume  (1).pdf"
@@ -86,11 +87,6 @@ export function Resume() {
             > 
               <Download size={14} /> DOWNLOAD RESUME
             </PixelButton>
-          </div>
-
-          <div className="mt-4 flex items-center justify-center gap-1">
-            <Sparkles size={10} className="text-retro-yellow" />
-            <span className="font-mono text-sm text-retro-gray">Click equip to view full stats</span>
           </div>
         </div>
 
