@@ -56,14 +56,14 @@ function App() {
 
       {/* Theme toggle */}
       <button
-        className="theme-toggle fixed top-3 right-3 z-[100] font-pixel text-[8px] text-retro-dark"
+        className="theme-toggle fixed bottom-28 right-4 z-[100] font-pixel text-[8px] text-retro-dark"
         onClick={toggle}
         aria-label="Toggle theme"
         title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         style={{ boxShadow: '0 0 0 3px var(--retro-cyan)' }}
       >
         {theme === 'dark' ? (
-          <Sun size={18} className="text-retro-yellow" strokeWidth={2.5} />
+          <Sun size={18} className="text-retro-yellow" strokeWidth={2.5}/>
         ) : (
           <Moon size={18} className="text-retro-purple" strokeWidth={2.5} />
         )}
