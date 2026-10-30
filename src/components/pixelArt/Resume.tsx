@@ -78,7 +78,7 @@ export function Resume() {
 
             {/* Download button */}
             <PixelButton
-              href="https://drive.google.com/file/d/1yauDQloXOkdRkk4zErA26oPaaru3Dcsb/preview"
+              href="https://drive.google.com/file/d/1uHS0eQKSWokk0-n5Dkp50lRsA0lU5jFO/preview"
               target="_blank" 
               color="green"
               size="md"
