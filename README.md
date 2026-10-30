@@ -19,19 +19,3 @@ The portfolio is built using modern web technologies, with a focus on creating a
 * **Styling:** CSS / Tailwind CSS
 * **Tools:** Git & GitHub
 * **Design:** Responsive & interactive UI
-
-## Currently Learning
-
-I'm currently exploring and strengthening my skills in:
-
-* Cybersecurity
-* Python
-* AI & automation
-
-## Featured Projects
-
-Some of the projects I've worked on are featured directly on my portfolio.
-
-## Connect With Me
-
-If you'd like to connect, collaborate, or just talk about tech, feel free to reach out through the links on my portfolio.
