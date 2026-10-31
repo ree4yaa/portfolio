@@ -115,7 +115,7 @@ export function Hero({ onStart }: HeroProps) {
       </div>
 
       {/* === GIRL DEVELOPER CHARACTER === */}
-      <div className="absolute bottom-[55%] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-[60%] left-1/2 -translate-x-1/2 z-10">
         <div className="animate-idle-bob">
           <PixelArt
             grid={frame % 2 === 0 ? girlDev : girlDevIdle}
