@@ -28,7 +28,9 @@ export function BottomNav({ activeSection, onNavigate }: BottomNavProps) {
     <>
       {/* Mobile expand toggle */}
       <button
-        className="sm:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 font-pixel text-[8px] text-retro-bg bg-retro-yellow border-4 border-retro-dark px-4 py-2 rounded-none"
+        className={`sm:hidden fixed left-1/2 -translate-x-1/2 z-50 font-pixel text-[8px] text-retro-bg bg-retro-yellow border-4 border-retro-dark px-4 py-2 rounded-none transition-all duration-200 ${
+    expanded ? 'bottom-20' : 'bottom-0'
+  }`}
         style={{ boxShadow: '0 0 0 4px #ffe600' }}
         onClick={() => setExpanded((e) => !e)}
         aria-label="Toggle navigation"
