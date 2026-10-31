@@ -1,6 +1,6 @@
 # Description
 
-I made this using my frontend knowledge. And, also being a pixel art enthusiasts :3, i integrated this with pixel art
+A personal portfolio inside a pixel-art video game.
 
 ##  What's Inside?
 
