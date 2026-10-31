@@ -1,8 +1,8 @@
 # Description
 
-I made this using my frontend knowledge. And, also being a pixel art enthusiasts :3, i integrated this with pixel art
+A personal portfolio inside a pixel-art video game.
 
-##  What's Inside?
+## What's Inside?
 
 *  About Me
 *  Skills & Technologies
@@ -11,7 +11,7 @@ I made this using my frontend knowledge. And, also being a pixel art enthusiasts
 *  Certifications & Achievements
 *  Ways to connect with me
 
-##  Tech Stack
+## Tech Stack
 
 The portfolio is built using modern web technologies, with a focus on creating an interactive and visually engaging experience.
 
@@ -19,3 +19,7 @@ The portfolio is built using modern web technologies, with a focus on creating a
 * **Styling:** CSS / Tailwind CSS
 * **Tools:** Git & GitHub
 * **Design:** Responsive & interactive UI
+* 
+## Quick Note
+
+> **Tip:** Make sure to hit the **`▶ START`** button on the start screen to begin exploring the portfolio.
