@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { PixelArt } from '@/components/pixelArt';
+import { PixelArt } from '@/components/PixelArt';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { trophy, star, heart, sword, shield } from '@/components/pixelArt/sprites';
 import { Trophy, Award, Medal, Flame, GitBranch, GraduationCap } from 'lucide-react';
-import type { PixelGrid } from '@/components/pixelArt';
+import type { PixelGrid } from '@/components/PixelArt';
 
 interface Achievement {
   title: string;

@@ -1,5 +1,5 @@
-import { PixelArt } from '@/components/pixelArt';
-import type { PixelGrid } from '@/components/pixelArt';
+import { PixelArt } from '@/components/PixelArt';
+import type { PixelGrid } from '@/components/PixelArt';
 import { cloud, cloudSmall, star, starSmall, coin, tree, flower } from '@/components/pixelArt/sprites';
 
 interface CloudProps {

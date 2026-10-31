@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PixelArt } from '@/components/pixelArt';
+import { PixelArt } from '@/components/PixelArt';
 import { PixelButton } from '@/components/pixelArt/PixelButton';
 import { useReveal } from '@/components/pixelArt/useReveal';
 import { FileText, Download, Sparkles, Eye, X } from 'lucide-react';
