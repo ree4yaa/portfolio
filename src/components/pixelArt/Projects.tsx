@@ -116,7 +116,7 @@ export function Projects() {
             <Swords size={16} /> BOSS BATTLES
           </span>
         </div>
-        <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
+        <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white">
           PROJECTS
         </h2>
         <p className="font-mono text-lg text-retro-gray">~ Defeat Each Mission ~</p>
