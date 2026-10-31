@@ -31,7 +31,7 @@ export function Contact() {
             FINAL LEVEL
           </span>
         </div>
-        <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white text-pixel-shadow mb-3">
+        <h2 className="font-pixel text-[16px] sm:text-[24px] md:text-[32px] text-retro-white">
           CONTACT
         </h2>
         <p className="font-pixel text-[10px] sm:text-[14px] text-retro-yellow animate-pulse-glow mb-2">
