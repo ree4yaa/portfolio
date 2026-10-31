@@ -69,7 +69,7 @@ export function Hero({ onStart }: HeroProps) {
               ●
             </span>
             <span className="font-pixel text-[7px] sm:text-[9px] text-retro-white">
-              PLAYER 01
+              REEYA
             </span>
           </div>
         </div>
