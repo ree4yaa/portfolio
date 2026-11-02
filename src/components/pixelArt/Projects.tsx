@@ -64,7 +64,7 @@ const synapzBoss: PixelGrid = [
 const projects: Project[] = [
   {
     title: 'TIC TAC TOE',
-    tagline: 'STAGE 1 - FUN GAME',
+    tagline: 'FUN GAME',
     description: 'A fun and interactive Tic-Tac-Toe game, featuring a clean UI, smooth gameplay, and dynamic win/draw detection.',
     tech: ['JavaScript', 'HTML', 'CSS'],
     github: 'https://github.com/ree4yaa/Tic-Tac-Toe',
@@ -73,7 +73,7 @@ const projects: Project[] = [
   },
   {
     title: 'SAY IT BACK',
-    tagline: 'STAGE 02 — COMMUNCATION',
+    tagline: 'COMMUNCATION',
     description: 'An interactive communication-focused web project. Features real-time feedback and engaging conversation mechanics for better user interaction.',
     tech: ['JavaScript', 'WebRTC', 'Node.js', 'CSS'],
     github: 'https://github.com/ree4yaa/say-it-back',
@@ -82,7 +82,7 @@ const projects: Project[] = [
   },
   {
     title: 'SYNAPZ',
-    tagline: 'STAGE 03 — QUIZ FUN GAME',
+    tagline: 'QUIZ FUN GAME',
     description: 'This is a modern, interactive quiz platform that combines learning and gameplay, allowing users to test their knowledge through dynamic quizzes.',
     tech: ['React', 'TypeScript', 'Tailwind', 'API'],
     github: 'https://github.com/ree4yaa/synapz',
