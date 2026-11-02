@@ -82,7 +82,7 @@ const projects: Project[] = [
   },
   {
     title: 'SYNAPZ',
-    tagline: 'QUIZ FUN GAME',
+    tagline: 'QUIZ GAME',
     description: 'This is a modern, interactive quiz platform that combines learning and gameplay, allowing users to test their knowledge through dynamic quizzes.',
     tech: ['React', 'TypeScript', 'Tailwind', 'API'],
     github: 'https://github.com/ree4yaa/synapz',
